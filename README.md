@@ -1,3 +1,0 @@
-# greenpeace
-
-Hello world
