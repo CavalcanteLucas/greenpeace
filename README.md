@@ -11,7 +11,9 @@ This is a repository to display the results for the Greenpeace technical challen
 
 Use the following command to re-generate the html files from the jupyter notebooks:
 
+```terminal
 make gen
+```
 
 ### Author
 
