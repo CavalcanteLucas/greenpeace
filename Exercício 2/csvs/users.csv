@@ -1,7 +1,0 @@
-first_name,last_name,gender,email,cell,age,state,pokemon,region,pokemon_types
-Neila,Oliveira,female,neila.oliveira@example.com,(97) 2482-9681,55,Amazonas,cyndaquil,Norte,['fire']
-Dayane,Campos,female,dayane.campos@example.com,(81) 9297-8780,58,Pernambuco,mudkip,Nordeste,['water']
-Maurílio,da Paz,male,maurilio.dapaz@example.com,(68) 2005-7551,63,Acre,sobble,Norte,['water']
-Reis,Freitas,male,reis.freitas@example.com,(63) 6383-8269,67,Tocantins,rowlet,Norte,"['grass', 'flying']"
-Analice,de Souza,female,analice.desouza@example.com,(81) 1902-1188,74,Pernambuco,charmander,Nordeste,['fire']
-Isaura,Lima,female,isaura.lima@example.com,(74) 2903-6779,51,Bahia,sobble,Nordeste,['water']

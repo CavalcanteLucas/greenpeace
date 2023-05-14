@@ -1,2 +1,120 @@
 first_name,last_name,gender,email,cell,age,state,pokemon
-Maurílio,da Paz,male,maurilio.dapaz@example.com,(68) 2005-7551,63,Acre,sobble
+Clodomiro,Viana,male,clodomiro.viana@example.com,(47) 8176-9128,59,Santa Catarina,popplio
+Lénio,da Conceição,male,lenio.daconceicao@example.com,(92) 1389-6580,64,Amazonas,froakie
+Armandino,Moreira,male,armandino.moreira@example.com,(28) 8290-2242,53,Espírito Santo,popplio
+Ruperto,Sales,male,ruperto.sales@example.com,(93) 7232-0596,62,Pará,popplio
+Lorival,Dias,male,lorival.dias@example.com,(69) 9579-2494,72,Rondônia,piplup
+Laurindo,Fernandes,male,laurindo.fernandes@example.com,(13) 6253-2995,46,São Paulo,popplio
+Adrião,Rocha,male,adriao.rocha@example.com,(98) 7458-4374,75,Maranhão,oshawott
+Tadeu,Santos,male,tadeu.santos@example.com,(24) 3040-5031,38,Rio de Janeiro,popplio
+Álvaro,da Cruz,male,alvaro.dacruz@example.com,(83) 9429-8513,79,Paraíba,froakie
+Cipriano,Barros,male,cipriano.barros@example.com,(51) 5630-5667,56,Rio Grande do Sul,piplup
+Belarmino,da Rosa,male,belarmino.darosa@example.com,(41) 6883-9913,61,Paraná,mudkip
+Liciniano,Pires,male,liciniano.pires@example.com,(87) 4138-1674,51,Pernambuco,oshawott
+Edvino,Rocha,male,edvino.rocha@example.com,(15) 5957-5630,51,São Paulo,popplio
+Sifredo,Aragão,male,sifredo.aragao@example.com,(46) 1775-1242,71,Paraná,mudkip
+Nonato,Moreira,male,nonato.moreira@example.com,(73) 2361-7562,61,Bahia,piplup
+Xénon,Lopes,male,xenon.lopes@example.com,(96) 9595-5582,76,Amapá,totodile
+Camilo,Souza,male,camilo.souza@example.com,(61) 0159-3649,33,Distrito Federal,popplio
+Alarico,Santos,male,alarico.santos@example.com,(21) 0438-0375,40,Rio de Janeiro,piplup
+Axel,da Conceição,male,axel.daconceicao@example.com,(79) 3304-3001,40,Sergipe,popplio
+Clemente,Sales,male,clemente.sales@example.com,(22) 0844-4415,27,Rio de Janeiro,froakie
+Vânio,Pinto,male,vanio.pinto@example.com,(96) 5687-8679,71,Amapá,piplup
+Enoque,Barbosa,male,enoque.barbosa@example.com,(28) 6678-9213,26,Espírito Santo,froakie
+Gentil,Porto,male,gentil.porto@example.com,(38) 8145-3482,45,Minas Gerais,mudkip
+Secundino,Caldeira,male,secundino.caldeira@example.com,(41) 8868-3415,76,Paraná,popplio
+Vidaúl,Gomes,male,vidaul.gomes@example.com,(64) 2074-4392,35,Goiás,froakie
+Fernão,Porto,male,fernao.porto@example.com,(62) 3054-8232,28,Goiás,oshawott
+Remízio,Rodrigues,male,remizio.rodrigues@example.com,(66) 9331-6020,54,Mato Grosso,froakie
+Alano,Pereira,male,alano.pereira@example.com,(96) 5563-2031,72,Amapá,froakie
+Olegário,Sales,male,olegario.sales@example.com,(42) 2246-9762,76,Paraná,sobble
+Sadi,das Neves,male,sadi.dasneves@example.com,(53) 4389-5766,28,Rio Grande do Sul,piplup
+Simauro,Fogaça,male,simauro.fogaca@example.com,(35) 7558-8125,60,Minas Gerais,sobble
+Vítor,Ramos,male,vitor.ramos@example.com,(15) 3739-9492,48,São Paulo,sobble
+Adónias,Mendes,male,adonias.mendes@example.com,(83) 9101-6447,42,Paraíba,sobble
+Tasso,Campos,male,tasso.campos@example.com,(48) 9329-1530,76,Santa Catarina,piplup
+Mendo,Teixeira,male,mendo.teixeira@example.com,(43) 5287-0953,68,Paraná,popplio
+Sávio,Gomes,male,savio.gomes@example.com,(12) 1629-1554,65,São Paulo,popplio
+Agenor,Costa,male,agenor.costa@example.com,(62) 0339-7269,49,Goiás,totodile
+Analide,Porto,male,analide.porto@example.com,(69) 8564-5152,65,Rondônia,mudkip
+Neutel,Jesus,male,neutel.jesus@example.com,(89) 6420-8394,56,Piauí,popplio
+Odair,Melo,male,odair.melo@example.com,(88) 6359-8972,50,Ceará,sobble
+Arcílio,Peixoto,male,arcilio.peixoto@example.com,(83) 4196-0105,32,Paraíba,popplio
+Virgulino,Caldeira,male,virgulino.caldeira@example.com,(41) 2769-5551,69,Paraná,froakie
+Elisiário,Novaes,male,elisiario.novaes@example.com,(92) 5280-2873,57,Amazonas,piplup
+Gávio,Sales,male,gavio.sales@example.com,(98) 8847-6040,73,Maranhão,froakie
+Heriberto,Silveira,male,heriberto.silveira@example.com,(86) 4078-3993,56,Piauí,mudkip
+Marino,da Paz,male,marino.dapaz@example.com,(54) 9902-2114,29,Rio Grande do Sul,squirtle
+Filémon,Pereira,male,filemon.pereira@example.com,(62) 2679-3193,52,Goiás,oshawott
+Adonilo,Moura,male,adonilo.moura@example.com,(44) 9383-9286,30,Paraná,popplio
+Baldemar,Lopes,male,baldemar.lopes@example.com,(97) 5128-8902,66,Amazonas,mudkip
+Arlindo,Ramos,male,arlindo.ramos@example.com,(17) 8972-3133,74,São Paulo,piplup
+Iag,Dias,male,iag.dias@example.com,(37) 4345-0153,26,Minas Gerais,oshawott
+Ludgero,Novaes,male,ludgero.novaes@example.com,(63) 4733-0585,38,Tocantins,popplio
+Mem,Melo,male,mem.melo@example.com,(65) 1305-9899,69,Mato Grosso,froakie
+Alão,Carvalho,male,alao.carvalho@example.com,(83) 7654-4390,52,Paraíba,piplup
+Gonçalo,da Costa,male,goncalo.dacosta@example.com,(98) 0886-6387,74,Maranhão,sobble
+Anacleto,Caldeira,male,anacleto.caldeira@example.com,(38) 0832-6947,66,Minas Gerais,oshawott
+Jeremias,Freitas,male,jeremias.freitas@example.com,(99) 4480-1500,69,Maranhão,squirtle
+Amador,Fernandes,male,amador.fernandes@example.com,(86) 4894-4744,28,Piauí,mudkip
+Janai,Martins,male,janai.martins@example.com,(93) 5966-5528,40,Pará,oshawott
+Vero,Lopes,male,vero.lopes@example.com,(43) 2443-7711,28,Paraná,squirtle
+Kévim,Moura,male,kevim.moura@example.com,(83) 1072-4584,64,Paraíba,froakie
+Vitálio,Souza,male,vitalio.souza@example.com,(16) 4396-9471,79,São Paulo,popplio
+Eustácio,Nogueira,male,eustacio.nogueira@example.com,(68) 6479-7155,58,Acre,oshawott
+Rosário,Alves,male,rosario.alves@example.com,(86) 2938-6335,72,Piauí,oshawott
+Níger,Cavalcanti,male,niger.cavalcanti@example.com,(61) 4141-0381,71,Distrito Federal,popplio
+Isac,Moreira,male,isac.moreira@example.com,(75) 3725-4445,41,Bahia,totodile
+Francisco de Borja,Caldeira,male,franciscodeborja.caldeira@example.com,(14) 8779-0809,60,São Paulo,froakie
+Marcelino,da Paz,male,marcelino.dapaz@example.com,(68) 2169-1612,29,Acre,mudkip
+Bartolomeu,Castro,male,bartolomeu.castro@example.com,(27) 7325-2025,33,Espírito Santo,mudkip
+Níger,Silva,male,niger.silva@example.com,(63) 8926-6313,62,Tocantins,totodile
+Vianei,da Costa,male,vianei.dacosta@example.com,(83) 2266-5083,69,Paraíba,oshawott
+Édipo,Viana,male,edipo.viana@example.com,(43) 2604-4882,49,Paraná,sobble
+Hirondino,da Conceição,male,hirondino.daconceicao@example.com,(14) 3296-1269,78,São Paulo,piplup
+Páris,Ferreira,male,paris.ferreira@example.com,(54) 9795-7327,64,Rio Grande do Sul,froakie
+Udo,Carvalho,male,udo.carvalho@example.com,(55) 6790-1761,77,Rio Grande do Sul,oshawott
+Hazael,Fernandes,male,hazael.fernandes@example.com,(12) 9391-7628,27,São Paulo,froakie
+Caetano,Moreira,male,caetano.moreira@example.com,(95) 9503-6107,34,Roraima,squirtle
+Boavida,Monteiro,male,boavida.monteiro@example.com,(47) 9891-1106,57,Santa Catarina,squirtle
+Melco,Jesus,male,melco.jesus@example.com,(19) 4844-5668,59,São Paulo,oshawott
+Gimeno,da Mota,male,gimeno.damota@example.com,(27) 7955-6446,77,Espírito Santo,mudkip
+Celino,Barbosa,male,celino.barbosa@example.com,(37) 5648-6686,46,Minas Gerais,froakie
+Tierri,Gonçalves,male,tierri.goncalves@example.com,(35) 1451-3963,39,Minas Gerais,totodile
+Zaido,Porto,male,zaido.porto@example.com,(33) 5641-8596,30,Minas Gerais,mudkip
+Marco,Caldeira,male,marco.caldeira@example.com,(43) 4939-6418,73,Paraná,piplup
+Adalsino,Santos,male,adalsino.santos@example.com,(18) 4141-8021,72,São Paulo,piplup
+Sabino,Silva,male,sabino.silva@example.com,(12) 8183-3847,64,São Paulo,squirtle
+Fred,Silveira,male,fred.silveira@example.com,(43) 1207-2164,57,Paraná,piplup
+Altino,Pereira,male,altino.pereira@example.com,(27) 4820-1351,68,Espírito Santo,mudkip
+Jadir,Almeida,male,jadir.almeida@example.com,(15) 3028-1505,42,São Paulo,mudkip
+Erique,Peixoto,male,erique.peixoto@example.com,(31) 1464-2628,53,Minas Gerais,mudkip
+Ângelo,Santos,male,angelo.santos@example.com,(88) 0140-4020,75,Ceará,squirtle
+Celestino,Melo,male,celestino.melo@example.com,(86) 3812-9004,41,Piauí,sobble
+Eurico,da Costa,male,eurico.dacosta@example.com,(73) 1726-0351,36,Bahia,squirtle
+Santiago,Monteiro,male,santiago.monteiro@example.com,(91) 9187-9747,47,Pará,squirtle
+Délcio,Cardoso,male,delcio.cardoso@example.com,(86) 4536-5036,68,Piauí,oshawott
+Patrício,Farias,male,patricio.farias@example.com,(99) 5924-2344,53,Maranhão,piplup
+Xenócrates,da Cunha,male,xenocrates.dacunha@example.com,(53) 7436-6280,42,Rio Grande do Sul,piplup
+Evaristo,Freitas,male,evaristo.freitas@example.com,(21) 5454-2907,61,Rio de Janeiro,mudkip
+Egas,Monteiro,male,egas.monteiro@example.com,(43) 3573-0562,68,Paraná,piplup
+Áquila,Barbosa,male,aquila.barbosa@example.com,(75) 1071-0297,35,Bahia,squirtle
+Bernardim,da Luz,male,bernardim.daluz@example.com,(75) 2988-0747,51,Bahia,piplup
+Adonias,Pereira,male,adonias.pereira@example.com,(98) 2131-9228,46,Maranhão,piplup
+Moisés,da Rosa,male,moises.darosa@example.com,(83) 2371-2689,69,Paraíba,totodile
+Íngue,da Cunha,male,ingue.dacunha@example.com,(54) 6759-1341,46,Rio Grande do Sul,totodile
+Arine,Pereira,male,arine.pereira@example.com,(84) 4003-1380,68,Rio Grande do Norte,totodile
+Cosme,Nunes,male,cosme.nunes@example.com,(44) 6462-4967,68,Paraná,mudkip
+Maurício,Farias,male,mauricio.farias@example.com,(51) 9083-2633,71,Rio Grande do Sul,totodile
+Neutel,da Cruz,male,neutel.dacruz@example.com,(93) 9308-9659,69,Pará,totodile
+Fausto,Pires,male,fausto.pires@example.com,(28) 5902-8450,73,Espírito Santo,oshawott
+Irineu,Porto,male,irineu.porto@example.com,(67) 2574-0021,74,Mato Grosso do Sul,piplup
+Alito,da Conceição,male,alito.daconceicao@example.com,(22) 0493-8920,44,Rio de Janeiro,piplup
+Ítalo,Silveira,male,italo.silveira@example.com,(55) 0755-8892,71,Rio Grande do Sul,froakie
+Honório,Nogueira,male,honorio.nogueira@example.com,(15) 4335-2536,67,São Paulo,popplio
+Xavier,Sales,male,xavier.sales@example.com,(21) 3477-5702,61,Rio de Janeiro,piplup
+Silas,Duarte,male,silas.duarte@example.com,(96) 7782-6296,52,Amapá,totodile
+Joel,Melo,male,joel.melo@example.com,(96) 7909-5666,45,Amapá,oshawott
+Noel,Nogueira,male,noel.nogueira@example.com,(93) 3247-7880,46,Pará,totodile
+Roli,Barros,male,roli.barros@example.com,(65) 3690-7650,54,Mato Grosso,sobble
+Dúnio,Pires,male,dunio.pires@example.com,(65) 1383-0897,66,Mato Grosso,totodile

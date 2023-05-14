@@ -1,2 +1,103 @@
 first_name,last_name,gender,email,cell,age,state,pokemon
-Reis,Freitas,male,reis.freitas@example.com,(63) 6383-8269,67,Tocantins,rowlet
+Fulgêncio,Fernandes,male,fulgencio.fernandes@example.com,(66) 2726-3136,29,Mato Grosso,bulbasaur
+Balbino,Almeida,male,balbino.almeida@example.com,(18) 2615-8313,70,São Paulo,chikorita
+Dilermando,Viana,male,dilermando.viana@example.com,(93) 9968-8563,67,Pará,snivy
+Nélio,da Cunha,male,nelio.dacunha@example.com,(71) 8878-5848,53,Bahia,bulbasaur
+Toledo,Pires,male,toledo.pires@example.com,(94) 1381-9142,29,Pará,grookey
+Enes,Oliveira,male,enes.oliveira@example.com,(89) 8031-3053,27,Piauí,turtwig
+Clésio,Ferreira,male,clesio.ferreira@example.com,(92) 7168-4930,32,Amazonas,snivy
+Durvalino,Mendes,male,durvalino.mendes@example.com,(21) 6120-9711,33,Rio de Janeiro,turtwig
+Matusalém,Caldeira,male,matusalem.caldeira@example.com,(27) 4787-0025,73,Espírito Santo,turtwig
+Emaús,Campos,male,emaus.campos@example.com,(37) 9145-3728,64,Minas Gerais,treecko
+Bendavid,Teixeira,male,bendavid.teixeira@example.com,(63) 4955-8954,28,Tocantins,snivy
+Natão,Ramos,male,natao.ramos@example.com,(89) 3427-7689,27,Piauí,snivy
+Priteche,da Cunha,male,priteche.dacunha@example.com,(79) 4010-5109,38,Sergipe,bulbasaur
+Israel,Freitas,male,israel.freitas@example.com,(41) 3788-8984,54,Paraná,chikorita
+Maciel,de Souza,male,maciel.desouza@example.com,(65) 1569-3669,29,Mato Grosso,treecko
+Aníbal,Moreira,male,anibal.moreira@example.com,(68) 2464-0292,62,Acre,chikorita
+Hermínio,Nascimento,male,herminio.nascimento@example.com,(13) 6804-5103,43,São Paulo,rowlet
+Décimo,Ferreira,male,decimo.ferreira@example.com,(44) 1045-5404,37,Paraná,chikorita
+Núrio,Moraes,male,nurio.moraes@example.com,(13) 9970-9260,69,São Paulo,grookey
+Cecílio,Duarte,male,cecilio.duarte@example.com,(71) 6070-3723,73,Bahia,chikorita
+Telmo,Oliveira,male,telmo.oliveira@example.com,(84) 4997-1041,51,Rio Grande do Norte,snivy
+Apolinário,Dias,male,apolinario.dias@example.com,(42) 1887-2559,30,Paraná,snivy
+Ruperto,Martins,male,ruperto.martins@example.com,(71) 8939-5991,79,Bahia,bulbasaur
+Oto,da Rocha,male,oto.darocha@example.com,(94) 1130-8383,71,Pará,bulbasaur
+Artur,Costa,male,artur.costa@example.com,(37) 7913-9779,44,Minas Gerais,treecko
+Ercílio,Araújo,male,ercilio.araujo@example.com,(49) 9923-7026,34,Santa Catarina,snivy
+Aquiles,Carvalho,male,aquiles.carvalho@example.com,(22) 6357-4223,56,Rio de Janeiro,chikorita
+Cristofe,Alves,male,cristofe.alves@example.com,(35) 4985-7556,62,Minas Gerais,grookey
+Nísio,Souza,male,nisio.souza@example.com,(55) 6067-4781,66,Rio Grande do Sul,snivy
+Nilton,Barros,male,nilton.barros@example.com,(35) 5092-4052,42,Minas Gerais,grookey
+Marcílio,da Conceição,male,marcilio.daconceicao@example.com,(61) 3264-8676,77,Distrito Federal,grookey
+Santana,Melo,male,santana.melo@example.com,(98) 9136-8152,61,Maranhão,snivy
+Abssilão,Mendes,male,abssilao.mendes@example.com,(53) 1353-1808,49,Rio Grande do Sul,grookey
+Nonato,Ribeiro,male,nonato.ribeiro@example.com,(21) 2377-7814,54,Rio de Janeiro,chespin
+Albano,Pinto,male,albano.pinto@example.com,(84) 8743-0387,54,Rio Grande do Norte,chikorita
+Macário,Ferreira,male,macario.ferreira@example.com,(49) 8633-4120,61,Santa Catarina,chespin
+Gil,Pereira,male,gil.pereira@example.com,(84) 8126-7666,54,Rio Grande do Norte,snivy
+Elgar,da Mota,male,elgar.damota@example.com,(88) 3683-5960,40,Ceará,turtwig
+Mesaque,Rodrigues,male,mesaque.rodrigues@example.com,(74) 4593-6136,27,Bahia,grookey
+Ciro,Porto,male,ciro.porto@example.com,(94) 1793-7776,43,Pará,rowlet
+Hemetério,Barbosa,male,hemeterio.barbosa@example.com,(34) 3291-7968,70,Minas Gerais,grookey
+Jonatã,Oliveira,male,jonata.oliveira@example.com,(48) 3550-4289,42,Santa Catarina,bulbasaur
+Ingo,Vieira,male,ingo.vieira@example.com,(11) 6311-2230,47,São Paulo,grookey
+Alvino,Campos,male,alvino.campos@example.com,(37) 0859-8264,56,Minas Gerais,chespin
+Dante,Farias,male,dante.farias@example.com,(62) 0270-8709,58,Goiás,treecko
+Joselindo,Dias,male,joselindo.dias@example.com,(41) 2339-8496,41,Paraná,grookey
+Adner,Monteiro,male,adner.monteiro@example.com,(91) 2753-5811,26,Pará,treecko
+Jordano,Nascimento,male,jordano.nascimento@example.com,(16) 4546-9057,76,São Paulo,rowlet
+Marino,Lima,male,marino.lima@example.com,(24) 5763-3369,51,Rio de Janeiro,chikorita
+Adail,Rezende,male,adail.rezende@example.com,(45) 9500-0471,43,Paraná,chespin
+Vitório,Alves,male,vitorio.alves@example.com,(49) 1692-5482,59,Santa Catarina,turtwig
+Lisandro,Alves,male,lisandro.alves@example.com,(83) 9539-6340,46,Paraíba,bulbasaur
+Eustáquio,Jesus,male,eustaquio.jesus@example.com,(73) 7771-1038,78,Bahia,chikorita
+Lucínio,da Conceição,male,lucinio.daconceicao@example.com,(55) 5742-0333,34,Rio Grande do Sul,chespin
+Osmano,Silveira,male,osmano.silveira@example.com,(74) 7430-4163,57,Bahia,grookey
+Huberto,Cavalcanti,male,huberto.cavalcanti@example.com,(67) 0072-1089,50,Mato Grosso do Sul,rowlet
+Eleazar,Peixoto,male,eleazar.peixoto@example.com,(44) 5468-5821,68,Paraná,snivy
+Aldo,Barbosa,male,aldo.barbosa@example.com,(95) 1113-9719,40,Roraima,chespin
+Delfim,Cardoso,male,delfim.cardoso@example.com,(24) 5019-5181,37,Rio de Janeiro,rowlet
+Hólger,Campos,male,holger.campos@example.com,(42) 8131-6687,26,Paraná,rowlet
+Romeu,Barbosa,male,romeu.barbosa@example.com,(11) 6380-7394,26,São Paulo,grookey
+Hermitério,da Luz,male,hermiterio.daluz@example.com,(28) 6594-0953,78,Espírito Santo,chespin
+Joselindo,Araújo,male,joselindo.araujo@example.com,(85) 9632-4654,26,Ceará,bulbasaur
+Hérman,Fernandes,male,herman.fernandes@example.com,(99) 7590-9177,39,Maranhão,treecko
+Jóni,Carvalho,male,joni.carvalho@example.com,(33) 9771-5118,55,Minas Gerais,snivy
+Quaresma,Rezende,male,quaresma.rezende@example.com,(33) 3777-7255,61,Minas Gerais,turtwig
+Amândio,Almeida,male,amandio.almeida@example.com,(21) 7308-1734,69,Rio de Janeiro,bulbasaur
+Zacarias,Carvalho,male,zacarias.carvalho@example.com,(85) 9402-2207,27,Ceará,chespin
+Lúcio,Nunes,male,lucio.nunes@example.com,(34) 1856-1761,75,Minas Gerais,turtwig
+Cristóvão,Pinto,male,cristovao.pinto@example.com,(15) 4466-0097,41,São Paulo,chespin
+Evaldo,Melo,male,evaldo.melo@example.com,(24) 8561-3779,62,Rio de Janeiro,chespin
+Ragendra,Farias,male,ragendra.farias@example.com,(82) 7817-6361,25,Alagoas,turtwig
+Lito,Silva,male,lito.silva@example.com,(93) 1655-0422,69,Pará,treecko
+Ademir,Fogaça,male,ademir.fogaca@example.com,(24) 8562-5990,76,Rio de Janeiro,bulbasaur
+Nói,da Costa,male,noi.dacosta@example.com,(45) 8335-5608,68,Paraná,chikorita
+Apolónio,Martins,male,apolonio.martins@example.com,(67) 9266-3267,55,Mato Grosso do Sul,treecko
+Mis,Ramos,male,mis.ramos@example.com,(93) 5518-1626,26,Pará,turtwig
+Eustácio,Gonçalves,male,eustacio.goncalves@example.com,(42) 3931-5424,27,Paraná,snivy
+Miguel,Cavalcanti,male,miguel.cavalcanti@example.com,(17) 3182-7677,46,São Paulo,bulbasaur
+Austrelino,Ribeiro,male,austrelino.ribeiro@example.com,(61) 8474-6118,72,Distrito Federal,snivy
+Torquato,Duarte,male,torquato.duarte@example.com,(47) 4061-9782,58,Santa Catarina,snivy
+Franklino,Ferreira,male,franklino.ferreira@example.com,(37) 3395-0653,54,Minas Gerais,grookey
+Haraldo,Martins,male,haraldo.martins@example.com,(14) 1507-8184,38,São Paulo,snivy
+Cipriano,da Costa,male,cipriano.dacosta@example.com,(82) 0238-6984,75,Alagoas,turtwig
+Idário,Ramos,male,idario.ramos@example.com,(54) 6999-1867,77,Rio Grande do Sul,bulbasaur
+Soeiro,Rodrigues,male,soeiro.rodrigues@example.com,(43) 4222-4416,48,Paraná,chespin
+Sadraque,Lopes,male,sadraque.lopes@example.com,(82) 5630-3905,77,Alagoas,bulbasaur
+Teotónio,Oliveira,male,teotonio.oliveira@example.com,(87) 4102-7561,36,Pernambuco,chikorita
+Abraim,Cavalcanti,male,abraim.cavalcanti@example.com,(84) 5583-4416,56,Rio Grande do Norte,turtwig
+Airton,Viana,male,airton.viana@example.com,(13) 1109-2379,40,São Paulo,snivy
+Guadalberto,Duarte,male,guadalberto.duarte@example.com,(74) 3994-8224,49,Bahia,rowlet
+Bassarme,Pires,male,bassarme.pires@example.com,(32) 7230-3254,38,Minas Gerais,snivy
+Adelmo,Caldeira,male,adelmo.caldeira@example.com,(92) 2465-1238,41,Amazonas,bulbasaur
+Levi,da Conceição,male,levi.daconceicao@example.com,(62) 5802-4934,65,Goiás,rowlet
+Ítalo,da Cruz,male,italo.dacruz@example.com,(64) 1258-3284,73,Goiás,grookey
+Benício,Sales,male,benicio.sales@example.com,(79) 9398-5867,30,Sergipe,chespin
+Guarani,Ferreira,male,guarani.ferreira@example.com,(55) 4106-6468,67,Rio Grande do Sul,snivy
+Benício,Fernandes,male,benicio.fernandes@example.com,(49) 0266-6149,32,Santa Catarina,bulbasaur
+Iago,Santos,male,iago.santos@example.com,(22) 3198-2929,36,Rio de Janeiro,chikorita
+Adosindo,Nunes,male,adosindo.nunes@example.com,(28) 2196-1984,54,Espírito Santo,snivy
+Alcibíades,Ferreira,male,alcibiades.ferreira@example.com,(94) 1974-4842,53,Pará,chespin
+Hérman,Ribeiro,male,herman.ribeiro@example.com,(91) 4076-8879,27,Pará,rowlet
