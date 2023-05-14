@@ -9,8 +9,7 @@ Cada analista da equipe de Inteligência de Dados tem um perfil próprio e temos
 GRANT ALL PRIVILEGES ON TABLE press_data TO gp_user;
 ```
 
-> **Reference**: [[GRANT]](https://docs.aws.amazon.com/pt_br/redshift/latest/dg/r_GRANT.html
-)
+> **Reference**: [[GRANT]](https://docs.aws.amazon.com/pt_br/redshift/latest/dg/r_GRANT.html)
 
 ## Questão 2
 Em algumas vezes, mesmo após dar permissão uma vez, a tabela é reescrita com o parâmetro **drop** e perde as permissões. Qual o código que deve ser feito para que a tabela sempre herde os privilégios de forma padrão?
