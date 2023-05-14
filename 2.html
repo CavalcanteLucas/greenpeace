@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Exercício 1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Exercício 2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -15108,15 +15108,451 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[392]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">randomuser</span> <span class="kn">import</span> <span class="n">RandomUser</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">from</span> <span class="nn">IPython.utils</span> <span class="kn">import</span> <span class="n">io</span>
+<span class="kn">from</span> <span class="nn">googleapiclient.discovery</span> <span class="kn">import</span> <span class="n">build</span>
+<span class="kn">from</span> <span class="nn">googleapiclient.errors</span> <span class="kn">import</span> <span class="n">HttpError</span>
+<span class="kn">from</span> <span class="nn">google_auth_oauthlib.flow</span> <span class="kn">import</span> <span class="n">InstalledAppFlow</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">googleapiclient.http</span> <span class="kn">import</span> <span class="n">MediaFileUpload</span>
+<span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[393]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 1</span>
+
+<span class="sd">Usar a API do Random User Generator para gerar uma lista de 1.000 usuários brasileiros</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">users</span> <span class="o">=</span> <span class="n">RandomUser</span><span class="o">.</span><span class="n">generate_users</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;nat&quot;</span><span class="p">:</span> <span class="s2">&quot;br&quot;</span><span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1000
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[394]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 1.1</span>
+
+<span class="sd">Faça uma tabela com todas as informações desses usuários</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">users_info</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+    <span class="n">user_info</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">get_first_name</span><span class="p">(),</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">get_last_name</span><span class="p">(),</span>
+        <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">get_gender</span><span class="p">(),</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">get_email</span><span class="p">(),</span>
+        <span class="s2">&quot;cell&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">get_cell</span><span class="p">(),</span>
+        <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">get_age</span><span class="p">(),</span>
+    <span class="p">}</span>
+    <span class="n">users_info</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">user_info</span><span class="p">)</span>
+
+<span class="n">users_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">users_info</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">users_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>|    | first_name   | last_name   | gender   | email                           | cell           |   age |
+|---:|:-------------|:------------|:---------|:--------------------------------|:---------------|------:|
+|  0 | Guimar       | da Mata     | male     | guimar.damata@example.com       | (29) 5636-9110 |    67 |
+|  1 | Carlúcia     | Vieira      | female   | carlucia.vieira@example.com     | (59) 9856-0868 |    30 |
+|  2 | Clodomiro    | Viana       | male     | clodomiro.viana@example.com     | (47) 8176-9128 |    59 |
+|  3 | Evangelista  | Silva       | male     | evangelista.silva@example.com   | (41) 8319-1577 |    70 |
+|  4 | Fulgêncio    | Fernandes   | male     | fulgencio.fernandes@example.com | (66) 2726-3136 |    29 |
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[395]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 1.2</span>
+
+<span class="sd">Crie uma coluna que indique o Estado do usuário, baseado em seu telefone celular</span>
+<span class="sd">Se o telefone celular tiver um DDD inexistente remova o usuário da tabela</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">get_state_from_ddd</span><span class="p">(</span><span class="n">ddd</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;11&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;12&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;13&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;14&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;16&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;17&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;18&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;19&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;21&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio de Janeiro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;22&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio de Janeiro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;24&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio de Janeiro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;27&quot;</span><span class="p">:</span> <span class="s2">&quot;Espírito Santo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;28&quot;</span><span class="p">:</span> <span class="s2">&quot;Espírito Santo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;31&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;32&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;33&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;34&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;35&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;37&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;38&quot;</span><span class="p">:</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;41&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;42&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;43&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;44&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;45&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;46&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;47&quot;</span><span class="p">:</span> <span class="s2">&quot;Santa Catarina&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;48&quot;</span><span class="p">:</span> <span class="s2">&quot;Santa Catarina&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;49&quot;</span><span class="p">:</span> <span class="s2">&quot;Santa Catarina&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;51&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;53&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;54&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;55&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;61&quot;</span><span class="p">:</span> <span class="s2">&quot;Distrito Federal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;62&quot;</span><span class="p">:</span> <span class="s2">&quot;Goiás&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;63&quot;</span><span class="p">:</span> <span class="s2">&quot;Tocantins&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;64&quot;</span><span class="p">:</span> <span class="s2">&quot;Goiás&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;65&quot;</span><span class="p">:</span> <span class="s2">&quot;Mato Grosso&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;66&quot;</span><span class="p">:</span> <span class="s2">&quot;Mato Grosso&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;67&quot;</span><span class="p">:</span> <span class="s2">&quot;Mato Grosso do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;68&quot;</span><span class="p">:</span> <span class="s2">&quot;Acre&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;69&quot;</span><span class="p">:</span> <span class="s2">&quot;Rondônia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;71&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;73&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;74&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;75&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;77&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;79&quot;</span><span class="p">:</span> <span class="s2">&quot;Sergipe&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;81&quot;</span><span class="p">:</span> <span class="s2">&quot;Pernambuco&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;82&quot;</span><span class="p">:</span> <span class="s2">&quot;Alagoas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;83&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraíba&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;84&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio Grande do Norte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;85&quot;</span><span class="p">:</span> <span class="s2">&quot;Ceará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;86&quot;</span><span class="p">:</span> <span class="s2">&quot;Piauí&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;87&quot;</span><span class="p">:</span> <span class="s2">&quot;Pernambuco&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;88&quot;</span><span class="p">:</span> <span class="s2">&quot;Ceará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;89&quot;</span><span class="p">:</span> <span class="s2">&quot;Piauí&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;91&quot;</span><span class="p">:</span> <span class="s2">&quot;Pará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;92&quot;</span><span class="p">:</span> <span class="s2">&quot;Amazonas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;93&quot;</span><span class="p">:</span> <span class="s2">&quot;Pará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;94&quot;</span><span class="p">:</span> <span class="s2">&quot;Pará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;95&quot;</span><span class="p">:</span> <span class="s2">&quot;Roraima&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;96&quot;</span><span class="p">:</span> <span class="s2">&quot;Amapá&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;97&quot;</span><span class="p">:</span> <span class="s2">&quot;Amazonas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;98&quot;</span><span class="p">:</span> <span class="s2">&quot;Maranhão&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;99&quot;</span><span class="p">:</span> <span class="s2">&quot;Maranhão&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ddd</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">user_row</span> <span class="ow">in</span> <span class="n">users_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">ddd</span> <span class="o">=</span> <span class="n">user_row</span><span class="o">.</span><span class="n">cell</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">get_state_from_ddd</span><span class="p">(</span><span class="n">ddd</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">state</span><span class="p">:</span>
+        <span class="n">users_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">state</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">users_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">users_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">users_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>|    | first_name   | last_name   | gender   | email                           | cell           |   age | state          |
+|---:|:-------------|:------------|:---------|:--------------------------------|:---------------|------:|:---------------|
+|  0 | Clodomiro    | Viana       | male     | clodomiro.viana@example.com     | (47) 8176-9128 |    59 | Santa Catarina |
+|  1 | Evangelista  | Silva       | male     | evangelista.silva@example.com   | (41) 8319-1577 |    70 | Paraná         |
+|  2 | Fulgêncio    | Fernandes   | male     | fulgencio.fernandes@example.com | (66) 2726-3136 |    29 | Mato Grosso    |
+|  3 | Balbino      | Almeida     | male     | balbino.almeida@example.com     | (18) 2615-8313 |    70 | São Paulo      |
+|  4 | Odara        | Silveira    | female   | odara.silveira@example.com      | (44) 5816-3343 |    38 | Paraná         |
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[396]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 2</span>
+
+<span class="sd">Baixe os Pokémons iniciais de todas as gerações por meio da PokeAPI</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">initial_pokemons</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;bulbasaur&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;charmander&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;squirtle&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pikachu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chikorita&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cyndaquil&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;totodile&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;treecko&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;torchic&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mudkip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;turtwig&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chimchar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;piplup&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;snivy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tepig&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;oshawott&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chespin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fennekin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;froakie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rowlet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;litten&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;popplio&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grookey&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;scorbunny&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sobble&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pokeapi.co/api/v2/pokemon/&quot;</span>
+
+<span class="n">pokemons</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">pokemon_name</span> <span class="ow">in</span> <span class="n">initial_pokemons</span><span class="p">:</span>
+    <span class="n">url_pokemon</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pokemon_name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url_pokemon</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">pokemons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pokemon_name</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pokemon_name</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>bulbasaur - &lt;Response [200]&gt;
+charmander - &lt;Response [200]&gt;
+squirtle - &lt;Response [200]&gt;
+pikachu - &lt;Response [200]&gt;
+chikorita - &lt;Response [200]&gt;
+cyndaquil - &lt;Response [200]&gt;
+totodile - &lt;Response [200]&gt;
+treecko - &lt;Response [200]&gt;
+torchic - &lt;Response [200]&gt;
+mudkip - &lt;Response [200]&gt;
+turtwig - &lt;Response [200]&gt;
+chimchar - &lt;Response [200]&gt;
+piplup - &lt;Response [200]&gt;
+snivy - &lt;Response [200]&gt;
+tepig - &lt;Response [200]&gt;
+oshawott - &lt;Response [200]&gt;
+chespin - &lt;Response [200]&gt;
+fennekin - &lt;Response [200]&gt;
+froakie - &lt;Response [200]&gt;
+rowlet - &lt;Response [200]&gt;
+litten - &lt;Response [200]&gt;
+popplio - &lt;Response [200]&gt;
+grookey - &lt;Response [200]&gt;
+scorbunny - &lt;Response [200]&gt;
+sobble - &lt;Response [200]&gt;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[397]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 2.1</span>
+
+<span class="sd">Atribua um Pokémon inicial aleatório para cada um dos usuários</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">user_index</span><span class="p">,</span> <span class="n">user_row</span> <span class="ow">in</span> <span class="n">users_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">users_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">user_index</span><span class="p">,</span> <span class="s2">&quot;pokemon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">initial_pokemons</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">users_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>|    | first_name   | last_name   | gender   | email                           | cell           |   age | state          | pokemon   |
+|---:|:-------------|:------------|:---------|:--------------------------------|:---------------|------:|:---------------|:----------|
+|  0 | Clodomiro    | Viana       | male     | clodomiro.viana@example.com     | (47) 8176-9128 |    59 | Santa Catarina | popplio   |
+|  1 | Evangelista  | Silva       | male     | evangelista.silva@example.com   | (41) 8319-1577 |    70 | Paraná         | torchic   |
+|  2 | Fulgêncio    | Fernandes   | male     | fulgencio.fernandes@example.com | (66) 2726-3136 |    29 | Mato Grosso    | bulbasaur |
+|  3 | Balbino      | Almeida     | male     | balbino.almeida@example.com     | (18) 2615-8313 |    70 | São Paulo      | chikorita |
+|  4 | Odara        | Silveira    | female   | odara.silveira@example.com      | (44) 5816-3343 |    38 | Paraná         | mudkip    |
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[398]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 3.a</span>
+
+<span class="sd">Conecte com o Google Drive</span>
+<span class="sd">Disponível em: https://drive.google.com/drive/folders/1GvSdaQwIXeNE1KBhb-3Z-r-Sp_fCT2-E?usp=sharing</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">SCOPES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://www.googleapis.com/auth/drive&quot;</span><span class="p">]</span>
+<span class="n">credentials_json</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;credentials.json&quot;</span>
+<span class="n">flow</span> <span class="o">=</span> <span class="n">InstalledAppFlow</span><span class="o">.</span><span class="n">from_client_secrets_file</span><span class="p">(</span><span class="n">credentials_json</span><span class="p">,</span> <span class="n">SCOPES</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">io</span><span class="o">.</span><span class="n">capture_output</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
-    <span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+    <span class="n">credentials</span> <span class="o">=</span> <span class="n">flow</span><span class="o">.</span><span class="n">run_local_server</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">service</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="s2">&quot;drive&quot;</span><span class="p">,</span> <span class="s2">&quot;v3&quot;</span><span class="p">,</span> <span class="n">credentials</span><span class="o">=</span><span class="n">credentials</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15129,22 +15565,52 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[399]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Exercício 1 - Tarefa 2 - Item 1</span>
+<span class="sd">Tarefa 3.b</span>
 
-<span class="sd">Qual o tipo de reação mais reportado na tabela? Lembre-se que uma linha pode ter</span>
-<span class="sd">mais de uma reação separada por “;”.</span>
+<span class="sd">Crie uma pasta para cada elemento dos Pokémons</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">query_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;Tarefa 2/Item 1/item1.sql&quot;</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">query_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">query_job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">query_job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+<span class="n">pokemon_types</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">pokemon</span> <span class="ow">in</span> <span class="n">pokemons</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">type_item</span> <span class="ow">in</span> <span class="n">pokemon</span><span class="p">[</span><span class="s2">&quot;types&quot;</span><span class="p">]:</span>
+        <span class="n">pokemon_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">type_item</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">pokemon_types</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">pokemon_types</span><span class="p">))</span>
+
+
+<span class="n">env_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;.env&quot;</span>
+<span class="n">load_dotenv</span><span class="p">(</span><span class="n">dotenv_path</span><span class="o">=</span><span class="n">env_path</span><span class="p">)</span>
+
+<span class="n">greenpeace_folder_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GOOGLE_DRIVE_GREENPEACE_FOLDER_ID&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">files</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">greenpeace_folder_id</span><span class="si">}</span><span class="s2">&#39; in parents&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<span class="k">except</span> <span class="n">HttpError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+
+<span class="n">file_names_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]:</span>
+    <span class="n">file_names_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+<span class="n">google_drive_folder_id_by_type</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">pokemon_type</span> <span class="ow">in</span> <span class="n">pokemon_types</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">pokemon_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">file_names_list</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">file_metadata</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">pokemon_type</span><span class="p">,</span>
+                <span class="s2">&quot;mimeType&quot;</span><span class="p">:</span> <span class="s2">&quot;application/vnd.google-apps.folder&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;parents&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">greenpeace_folder_id</span><span class="p">],</span>
+            <span class="p">}</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">files</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">file_metadata</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="n">google_drive_folder_id_by_type</span><span class="p">[</span><span class="n">pokemon_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Folder for type *</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">* created successfully with ID: </span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="n">HttpError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2"> for type *</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">*&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Folder for type *</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">* already exists&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15164,9 +15630,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>|    | reaction       |   occurrence_count |
-|---:|:---------------|-------------------:|
-|  0 | OVARIAN CANCER |              33266 |
+<pre>Folder for type *grass* created successfully with ID: 1i_h8iSixiEnoXgkHUCGn_gfX4Yyxa1Gw
+Folder for type *electric* created successfully with ID: 1zptJq5hbPJweNDhUT3cPY_lo-aKlRc_J
+Folder for type *flying* created successfully with ID: 11cmXfgoAT2oLiUp15QcBi-krz2z87RGP
+Folder for type *fire* created successfully with ID: 1-35HN45ksh0ldfEqRejIEdxhX2x04wTe
+Folder for type *water* created successfully with ID: 16dhjTNwQvau3M257txU6dg2n3GEXNXoS
+Folder for type *poison* created successfully with ID: 1wKx3eKli6IWSOQXMga8x5e2z-BaV0r5u
 </pre>
 </div>
 </div>
@@ -15180,21 +15649,46 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[400]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Exercício 1 - Tarefa 2 - Item 2</span>
+<span class="sd">Tarefa 3.1</span>
 
-<span class="sd">Qual o nome da indústria que tem mais mortes reportadas?</span>
+<span class="sd">Adicione em cada uma das pastas dois arquivos em CSV</span>
+<span class="sd">Cada pasta deve ter dois arquivos um com todos os homens com Pokémons</span>
+<span class="sd">daquele tipo, e outro com todas as mulheres com Pokémons daquele tipo</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">query_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;Tarefa 2/Item 2/item2.sql&quot;</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">query_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">query_job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">query_job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+<span class="n">pokemon_by_type</span> <span class="o">=</span> <span class="p">{</span><span class="n">pokemon_type</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">pokemon_type</span> <span class="ow">in</span> <span class="n">pokemon_types</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">pokemon</span> <span class="ow">in</span> <span class="n">pokemons</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">type_item</span> <span class="ow">in</span> <span class="n">pokemon</span><span class="p">[</span><span class="s2">&quot;types&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">pokemon_type</span> <span class="ow">in</span> <span class="n">pokemon_types</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">type_item</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">pokemon_type</span><span class="p">:</span>
+                <span class="n">pokemon_by_type</span><span class="p">[</span><span class="n">pokemon_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pokemon</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+<span class="n">genders</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="s2">&quot;female&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">pokemon_type</span> <span class="ow">in</span> <span class="n">pokemon_types</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">gender</span> <span class="ow">in</span> <span class="n">genders</span><span class="p">:</span>
+        <span class="n">filtered_users_df</span> <span class="o">=</span> <span class="n">users_df</span><span class="p">[</span><span class="n">users_df</span><span class="p">[</span><span class="s2">&quot;pokemon&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">pokemon_by_type</span><span class="p">[</span><span class="n">pokemon_type</span><span class="p">])]</span>
+        <span class="n">filtered_users_df</span> <span class="o">=</span> <span class="n">filtered_users_df</span><span class="p">[</span><span class="n">filtered_users_df</span><span class="p">[</span><span class="s2">&quot;gender&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span><span class="p">]</span>
+        <span class="n">filtered_users_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;csvs/</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">gender</span><span class="si">}</span><span class="s2">_users.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">gender</span><span class="si">}</span><span class="s2">_users.csv&quot;</span>
+            <span class="n">file_metadata</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span>
+                <span class="s2">&quot;parents&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">google_drive_folder_id_by_type</span><span class="p">[</span><span class="n">pokemon_type</span><span class="p">]],</span>
+            <span class="p">}</span>
+            <span class="n">media</span> <span class="o">=</span> <span class="n">MediaFileUpload</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;csvs/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">mimetype</span><span class="o">=</span><span class="s2">&quot;text/plain&quot;</span><span class="p">)</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">files</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">file_metadata</span><span class="p">,</span> <span class="n">media_body</span><span class="o">=</span><span class="n">media</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;File for type *</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">* and gender *</span><span class="si">{</span><span class="n">gender</span><span class="si">}</span><span class="s2">* created successfully with ID: </span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">except</span> <span class="n">HttpError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2"> for type *</span><span class="si">{</span><span class="n">pokemon_type</span><span class="si">}</span><span class="s2">* and gender *</span><span class="si">{</span><span class="n">gender</span><span class="si">}</span><span class="s2">*&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15214,9 +15708,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>|    | reaction   | products_industry_name   |   occurrence_count |
-|---:|:-----------|:-------------------------|-------------------:|
-|  0 | DEATH      | Cosmetics                |              18632 |
+<pre>File for type *grass* and gender *male* created successfully with ID: 1TgQ-8BkBNYjjqT1BOCF_RKgGnUlpdmf2
+File for type *grass* and gender *female* created successfully with ID: 11BKp2Nky2bovKMqOw7MX1p-gnrDNepm8
+File for type *electric* and gender *male* created successfully with ID: 1YxhdoPFA94PzS-symzypZOkfIRw20xHe
+File for type *electric* and gender *female* created successfully with ID: 1Y_7Nm61eDLtAbcv71YE3SJD8JMp_I0iW
+File for type *flying* and gender *male* created successfully with ID: 1tidDCDZRjrHC2r50lnF0Xth7ahqIcb8T
+File for type *flying* and gender *female* created successfully with ID: 16O2WXs6aIG1Mtdzz44n5VHHTUdc1Wl_2
+File for type *fire* and gender *male* created successfully with ID: 1IMCVdtu_nzMxGR-TsKVbj9gav1Qskpik
+File for type *fire* and gender *female* created successfully with ID: 1ANp0T7Bl7XxEK842NcHgtXCWgcuGPm-6
+File for type *water* and gender *male* created successfully with ID: 1M5l45IXuQQmjDrnuF6I4IB9xVgbPRJk-
+File for type *water* and gender *female* created successfully with ID: 1SpBkwFy5trsIpfswPOkOZyeVan8TBKI_
+File for type *poison* and gender *male* created successfully with ID: 14XC5rpj8hcAXGO9GmxmHtAWsvaiO2IAo
+File for type *poison* and gender *female* created successfully with ID: 1U2kNGA8GTDXOdNdnJCa-_RYyyOjPT4z3
 </pre>
 </div>
 </div>
@@ -15230,22 +15733,25 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[498]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Exercício 1 - Tarefa 2 - Item 3</span>
+<span class="sd">Tarefa 4</span>
 
-<span class="sd">Quais as 3 principais reações adversas de pessoas entre 18-25 anos na indústria de</span>
-<span class="sd">cosméticos?</span>
+<span class="sd">Por fim, crie um Google Sheets com um resumo</span>
+<span class="sd">Disponível em: https://docs.google.com/spreadsheets/d/11M9cEiL0IMbOv8_Z7RMz-p2O7m8Opff70x0M9aTpaJI/edit?usp=sharing</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">query_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;Tarefa 2/Item 3/item3.sql&quot;</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">query_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">query_job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">query_job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+<span class="n">credentials_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">credentials_json</span><span class="p">))</span>
+<span class="n">gc</span><span class="p">,</span> <span class="n">authorized_user</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">oauth_from_dict</span><span class="p">(</span><span class="n">credentials_dict</span><span class="p">)</span>
+
+<span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;[GREENPEACE] Resumo&quot;</span><span class="p">)</span>
+
+<span class="n">worksheet_1</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Número de pessoas por região do Brasil&quot;</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">worksheet_2</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Elemento de pokemons por região do Brasil&quot;</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">sh</span><span class="o">.</span><span class="n">del_worksheet</span><span class="p">(</span><span class="n">sh</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="s2">&quot;Página1&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15265,13 +15771,231 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>|    | reaction       | products_industry_name   |   occurrence_count |
-|---:|:---------------|:-------------------------|-------------------:|
-|  0 | ALOPECIA       | Cosmetics                |                482 |
-|  1 | OVARIAN CANCER | Cosmetics                |                357 |
-|  2 | PRURITUS       | Cosmetics                |                272 |
+<pre>Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&amp;client_id=258343893071-cjl374q7gmric124p10qb9kncgkieqmd.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A53257%2F&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fspreadsheets+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&amp;state=v0ycLKBr9OlfpV962PQHuqmUqMaoRq&amp;access_type=offline
 </pre>
 </div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[498]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;spreadsheetId&#39;: &#39;11M9cEiL0IMbOv8_Z7RMz-p2O7m8Opff70x0M9aTpaJI&#39;,
+ &#39;replies&#39;: [{}]}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[499]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 4.a</span>
+
+<span class="sd">Indique o número de pessoas por região do Brasil (Norte, Sul, Sudeste, Nordeste, Centro-Oeste)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">regions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Norte&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Amazonas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Acre&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Tocantins&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rondônia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Pará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Roraima&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Amapá&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;Sul&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Santa Catarina&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Paraná&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;Sudeste&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rio de Janeiro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Espírito Santo&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;Nordeste&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Pernambuco&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Bahia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ceará&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rio Grande do Norte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Paraíba&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Maranhão&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Piauí&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Sergipe&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Alagoas&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;Centro-Oeste&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Goiás&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Mato Grosso&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Mato Grosso do Sul&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Distrito Federal&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">get_region</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">region</span><span class="p">,</span> <span class="n">states</span> <span class="ow">in</span> <span class="n">regions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">states</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">region</span>
+
+
+<span class="k">def</span> <span class="nf">get_pokemon_types</span><span class="p">(</span><span class="n">pokemon</span><span class="p">):</span>
+    <span class="n">pokemon_types</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pokemon_type</span><span class="p">,</span> <span class="n">pokemon_list</span> <span class="ow">in</span> <span class="n">pokemon_by_type</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">pokemon</span> <span class="ow">in</span> <span class="n">pokemon_list</span><span class="p">:</span>
+            <span class="n">pokemon_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pokemon_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pokemon_types</span>
+
+
+<span class="n">extended_users_df</span> <span class="o">=</span> <span class="n">users_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">extended_users_df</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">users_df</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_region</span><span class="p">)</span>
+<span class="n">users_by_region_df</span> <span class="o">=</span> <span class="n">extended_users_df</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">users_by_region_df</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+
+<span class="n">users_by_region_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">users_by_region_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Região&quot;</span><span class="p">,</span> <span class="s2">&quot;Número de pessoas&quot;</span><span class="p">]</span>
+<span class="n">worksheet_1</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="n">users_by_region_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span> <span class="o">+</span> <span class="n">users_by_region_df</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>| region       |   count |
+|:-------------|--------:|
+| Sudeste      |     203 |
+| Nordeste     |     151 |
+| Sul          |     143 |
+| Norte        |     103 |
+| Centro-Oeste |      68 |
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[499]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;spreadsheetId&#39;: &#39;11M9cEiL0IMbOv8_Z7RMz-p2O7m8Opff70x0M9aTpaJI&#39;,
+ &#39;updatedRange&#39;: &#34;&#39;Número de pessoas por região do Brasil&#39;!A1:B6&#34;,
+ &#39;updatedRows&#39;: 6,
+ &#39;updatedColumns&#39;: 2,
+ &#39;updatedCells&#39;: 12}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[500]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tarefa 4.b</span>
+
+<span class="sd">Indique o número de elementos de Pokemon por região do Brasil</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="n">types_by_region</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">regions</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">types_by_region</span><span class="p">[</span><span class="n">region</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">pokemon_type</span> <span class="ow">in</span> <span class="n">pokemon_types</span><span class="p">:</span>
+        <span class="n">types_by_region</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="n">pokemon_type</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">users_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">pokemon_type</span> <span class="ow">in</span> <span class="n">get_pokemon_types</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">pokemon</span><span class="p">):</span>
+        <span class="n">types_by_region</span><span class="p">[</span><span class="n">get_region</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">state</span><span class="p">)][</span><span class="n">pokemon_type</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">types_by_region_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">types_by_region</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">types_by_region_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+
+<span class="n">types_by_region_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Elemento&quot;</span>
+<span class="n">types_by_region_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">worksheet_2</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="n">types_by_region_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span> <span class="o">+</span> <span class="n">types_by_region_df</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>|          |   Norte |   Sul |   Sudeste |   Nordeste |   Centro-Oeste |
+|:---------|--------:|------:|----------:|-----------:|---------------:|
+| grass    |      35 |    46 |        64 |         49 |             19 |
+| electric |       2 |    10 |         6 |          4 |              0 |
+| flying   |       5 |     4 |         5 |          4 |              7 |
+| fire     |      27 |    35 |        64 |         55 |             19 |
+| water    |      39 |    52 |        69 |         43 |             30 |
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[500]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;spreadsheetId&#39;: &#39;11M9cEiL0IMbOv8_Z7RMz-p2O7m8Opff70x0M9aTpaJI&#39;,
+ &#39;updatedRange&#39;: &#34;&#39;Elemento de pokemons por região do Brasil&#39;!A1:F7&#34;,
+ &#39;updatedRows&#39;: 7,
+ &#39;updatedColumns&#39;: 6,
+ &#39;updatedCells&#39;: 42}</pre>
+</div>
+
 </div>
 
 </div>
