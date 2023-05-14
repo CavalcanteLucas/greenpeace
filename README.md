@@ -14,6 +14,11 @@ Use the following command to re-generate the html files from the jupyter noteboo
 make gen
 ```
 
+## Links
+
+- [Google Drive](https://drive.google.com/drive/u/0/folders/1GvSdaQwIXeNE1KBhb-3Z-r-Sp_fCT2-E)
+- [Google Sheets](https://docs.google.com/spreadsheets/d/1xnxHHwzIrMScqnTYfiZdQ1_1rUAFCvPXhWhq1a5nFlk/edit?usp=sharing)
+
 ### Author
 
 This project was developed by **Lucas Cavalcante**. If you have any questions or feedback, please feel free to contact the author at lucascpcavalcante@gmail.com.
