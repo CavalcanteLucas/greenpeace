@@ -4,7 +4,7 @@ This is a repository to display the results for the Greenpeace technical challen
 
 - [Questão 1](https://cavalcantelucas.github.io/greenpeace/1.html)
 - [Questão 2](https://cavalcantelucas.github.io/greenpeace/2.html)
-- [Questão 3](https://cavalcantelucas.github.io/greenpeace/3.html)
+- [Questão 3](https://cavalcantelucas.github.io/greenpeace/3.md)
 
 
 ## Notes
