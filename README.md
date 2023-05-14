@@ -17,4 +17,4 @@ make gen
 
 ### Author
 
-This project was developed by **Lucas C Cavalcante**. If you have any questions or feedback, please feel free to contact the author at lucascpcavalcante@gmail.com.
+This project was developed by **Lucas Cavalcante**. If you have any questions or feedback, please feel free to contact the author at lucascpcavalcante@gmail.com.
