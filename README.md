@@ -2,9 +2,9 @@
 
 This is a repository to display the results for the Greenpeace technical challenge to the Data Engineer role. Access the links bellow to see the results for each question.
 
-- [Questão 1](https://cavalcantelucas.github.io/greenpeace/1.html)
-- [Questão 2](https://cavalcantelucas.github.io/greenpeace/2.html)
-- [Questão 3](https://cavalcantelucas.github.io/greenpeace/3.md)
+- [Exerc[i] 1](https://cavalcantelucas.github.io/greenpeace/exericio_1.html)
+- [Questão 2](https://cavalcantelucas.github.io/greenpeace/exericio_2.html)
+- [Questão 3](https://cavalcantelucas.github.io/greenpeace/exericio_3.html)
 
 
 ## Notes
