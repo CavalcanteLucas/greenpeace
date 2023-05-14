@@ -5,7 +5,6 @@ This is a repository to display the results for the Greenpeace technical challen
 - [Exercício 1](https://cavalcantelucas.github.io/greenpeace/exercicio_1.html)
 - [Exercício 2](https://cavalcantelucas.github.io/greenpeace/exercicio_2.html)
 - [Exercício 3](https://cavalcantelucas.github.io/greenpeace/exercicio_3.html)
-- [Exercício 3](https://cavalcantelucas.github.io/greenpeace/exercicio_3.md)
 
 ## Notes
 
