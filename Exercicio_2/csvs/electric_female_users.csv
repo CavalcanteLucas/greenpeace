@@ -1,13 +1,19 @@
 first_name,last_name,gender,email,cell,age,state,pokemon
-Zarco ,Aragão,male,zarco.aragao@example.com,(54) 9475-5689,60,Rio Grande do Sul,pikachu
-Vitaliano,Pires,male,vitaliano.pires@example.com,(97) 9509-2225,76,Amazonas,pikachu
-Faustino,Barros,male,faustino.barros@example.com,(42) 8901-7460,68,Paraná,pikachu
-Juno,Ferreira,male,juno.ferreira@example.com,(33) 0500-7528,48,Minas Gerais,pikachu
-Giani,Souza,male,giani.souza@example.com,(55) 9186-4264,44,Rio Grande do Sul,pikachu
-Rui,da Luz,male,rui.daluz@example.com,(11) 5743-6898,47,São Paulo,pikachu
-Manel,Silva,male,manel.silva@example.com,(44) 2628-2055,58,Paraná,pikachu
-Noé,Peixoto,male,noe.peixoto@example.com,(71) 9189-7150,52,Bahia,pikachu
-Aloísio,Pires,male,aloisio.pires@example.com,(28) 0819-6982,75,Espírito Santo,pikachu
-Arquimino,Aragão,male,arquimino.aragao@example.com,(33) 9283-9289,69,Minas Gerais,pikachu
-Asélio,Jesus,male,aselio.jesus@example.com,(12) 8424-8611,42,São Paulo,pikachu
-Filipe de Néri,da Paz,male,filipedeneri.dapaz@example.com,(46) 7123-4820,61,Paraná,pikachu
+Mimon,de Souza,male,mimon.desouza@example.com,(54) 1983-8084,56,Rio Grande do Sul,pikachu
+Silas,Lima,male,silas.lima@example.com,(86) 4125-0495,64,Piauí,pikachu
+Alito,da Rosa,male,alito.darosa@example.com,(67) 2343-0422,31,Mato Grosso do Sul,pikachu
+Jacó,da Cruz,male,jaco.dacruz@example.com,(44) 5221-2498,53,Paraná,pikachu
+Firmo,Farias,male,firmo.farias@example.com,(98) 4943-3495,31,Maranhão,pikachu
+Livramento,da Conceição,male,livramento.daconceicao@example.com,(43) 0129-4294,74,Paraná,pikachu
+Armando,Gonçalves,male,armando.goncalves@example.com,(33) 7484-6057,56,Minas Gerais,pikachu
+Rúdi,Dias,male,rudi.dias@example.com,(14) 1870-3707,49,São Paulo,pikachu
+Arisberto,Novaes,male,arisberto.novaes@example.com,(44) 9170-4163,51,Paraná,pikachu
+Natanael,da Mota,male,natanael.damota@example.com,(63) 1965-2754,68,Tocantins,pikachu
+Veríssimo,Teixeira,male,verissimo.teixeira@example.com,(99) 3081-1437,43,Maranhão,pikachu
+Nadir,Teixeira,male,nadir.teixeira@example.com,(97) 7306-7717,52,Amazonas,pikachu
+Saúl,Castro,male,saul.castro@example.com,(69) 3343-5463,40,Rondônia,pikachu
+Xénio,Novaes,male,xenio.novaes@example.com,(37) 1982-6050,65,Minas Gerais,pikachu
+Leão,Costa,male,leao.costa@example.com,(65) 7696-5058,52,Mato Grosso,pikachu
+Quirilo,Pinto,male,quirilo.pinto@example.com,(55) 6011-4221,42,Rio Grande do Sul,pikachu
+Reinaldo,da Costa,male,reinaldo.dacosta@example.com,(94) 4821-3286,66,Pará,pikachu
+Pelaio,Rodrigues,male,pelaio.rodrigues@example.com,(97) 3817-6238,56,Amazonas,pikachu

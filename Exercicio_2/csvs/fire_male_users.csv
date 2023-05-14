@@ -1,102 +1,103 @@
 first_name,last_name,gender,email,cell,age,state,pokemon
-Evangelista,Silva,male,evangelista.silva@example.com,(41) 8319-1577,70,Paraná,torchic
-Clife,Santos,male,clife.santos@example.com,(41) 7806-1283,27,Paraná,tepig
-Tomé,Cardoso,male,tome.cardoso@example.com,(16) 2106-1899,47,São Paulo,cyndaquil
-Ari,Lopes,male,ari.lopes@example.com,(86) 8718-2485,27,Piauí,cyndaquil
-Silvano,Souza,male,silvano.souza@example.com,(62) 9777-0545,56,Goiás,fennekin
-Fernão de Magalhães,Duarte,male,fernaodemagalhaes.duarte@example.com,(13) 0429-9758,38,São Paulo,torchic
-Rudesindo,das Neves,male,rudesindo.dasneves@example.com,(81) 0658-3503,40,Pernambuco,tepig
-Amor,da Cunha,male,amor.dacunha@example.com,(48) 8268-6530,78,Santa Catarina,charmander
-Gonzaga,Viana,male,gonzaga.viana@example.com,(45) 8556-0419,30,Paraná,scorbunny
-Garibaldo,da Cruz,male,garibaldo.dacruz@example.com,(65) 7482-4690,54,Mato Grosso,charmander
-Toni,Santos,male,toni.santos@example.com,(24) 0349-5248,52,Rio de Janeiro,fennekin
-Aniceto,Oliveira,male,aniceto.oliveira@example.com,(97) 4736-7222,48,Amazonas,charmander
-Gávio,Ramos,male,gavio.ramos@example.com,(89) 9455-8492,54,Piauí,tepig
-Deolindo,da Rosa,male,deolindo.darosa@example.com,(65) 3487-1737,55,Mato Grosso,cyndaquil
-Gonzaga,Costa,male,gonzaga.costa@example.com,(81) 3766-7211,74,Pernambuco,charmander
-Baqui,Rocha,male,baqui.rocha@example.com,(97) 2533-9415,66,Amazonas,litten
-Teobaldo,Oliveira,male,teobaldo.oliveira@example.com,(42) 8092-8882,31,Paraná,chimchar
-Sátiro,Porto,male,satiro.porto@example.com,(73) 2303-2489,68,Bahia,tepig
-Sotero,Fogaça,male,sotero.fogaca@example.com,(99) 3393-2350,27,Maranhão,scorbunny
-Roboredo,Barros,male,roboredo.barros@example.com,(42) 5290-7670,69,Paraná,scorbunny
-Gersão,Silva,male,gersao.silva@example.com,(17) 2948-7862,63,São Paulo,scorbunny
-Galiano,da Conceição,male,galiano.daconceicao@example.com,(31) 6804-9568,71,Minas Gerais,cyndaquil
-Ubaldo,Carvalho,male,ubaldo.carvalho@example.com,(84) 4300-8298,57,Rio Grande do Norte,torchic
-Simplício,Jesus,male,simplicio.jesus@example.com,(12) 0832-8400,68,São Paulo,cyndaquil
-Riu,Gonçalves,male,riu.goncalves@example.com,(45) 7165-7283,58,Paraná,scorbunny
-Teobaldo,Pinto,male,teobaldo.pinto@example.com,(79) 4863-1627,67,Sergipe,charmander
-Ulrico,Barros,male,ulrico.barros@example.com,(31) 3347-9693,70,Minas Gerais,tepig
-Alexandrino,Teixeira,male,alexandrino.teixeira@example.com,(87) 0774-5574,74,Pernambuco,cyndaquil
-Bassarme,Moreira,male,bassarme.moreira@example.com,(18) 7374-9681,31,São Paulo,litten
-Fabião,da Mota,male,fabiao.damota@example.com,(74) 6129-0337,64,Bahia,chimchar
-Aires,Lopes,male,aires.lopes@example.com,(61) 0446-3825,66,Distrito Federal,charmander
-Lótus,da Mata,male,lotus.damata@example.com,(15) 2346-2918,54,São Paulo,chimchar
-Édipo,de Souza,male,edipo.desouza@example.com,(75) 5433-7832,32,Bahia,litten
-Valdir,Ferreira,male,valdir.ferreira@example.com,(75) 1523-0060,75,Bahia,tepig
-Isidro,Pinto,male,isidro.pinto@example.com,(99) 0141-2365,34,Maranhão,torchic
-Caim,da Rocha,male,caim.darocha@example.com,(33) 1159-3718,38,Minas Gerais,scorbunny
-Válter,Melo,male,valter.melo@example.com,(32) 7700-1066,64,Minas Gerais,charmander
-Antonino,de Souza,male,antonino.desouza@example.com,(35) 6843-8837,38,Minas Gerais,litten
-Salazar,Oliveira,male,salazar.oliveira@example.com,(99) 7425-8961,76,Maranhão,chimchar
-Núrio,Farias,male,nurio.farias@example.com,(95) 4714-8621,33,Roraima,fennekin
-Maurílio,Martins,male,maurilio.martins@example.com,(86) 2843-4958,42,Piauí,charmander
-Tito,Moraes,male,tito.moraes@example.com,(93) 3523-5055,43,Pará,chimchar
-Bertino,Oliveira,male,bertino.oliveira@example.com,(12) 7362-4922,58,São Paulo,charmander
-Varo,Caldeira,male,varo.caldeira@example.com,(21) 4723-6152,48,Rio de Janeiro,scorbunny
-Abrão,da Conceição,male,abrao.daconceicao@example.com,(32) 4305-6452,75,Minas Gerais,litten
-Márvio,Pinto,male,marvio.pinto@example.com,(86) 7206-9578,55,Piauí,fennekin
-Apolinário,Moura,male,apolinario.moura@example.com,(19) 3123-2144,31,São Paulo,tepig
-Salma,Porto,male,salma.porto@example.com,(77) 5820-8307,60,Bahia,chimchar
-Alex,Dias,male,alex.dias@example.com,(41) 9886-2444,76,Paraná,chimchar
-Elvino,da Mota,male,elvino.damota@example.com,(44) 2151-0409,26,Paraná,charmander
-Libertário,Mendes,male,libertario.mendes@example.com,(96) 1273-6737,27,Amapá,fennekin
-Ivanoel,Novaes,male,ivanoel.novaes@example.com,(19) 7135-8495,56,São Paulo,scorbunny
-Cildo,Cardoso,male,cildo.cardoso@example.com,(49) 6290-4430,77,Santa Catarina,cyndaquil
-Roriz,Nogueira,male,roriz.nogueira@example.com,(99) 5311-8995,78,Maranhão,chimchar
-Odeberto,Barbosa,male,odeberto.barbosa@example.com,(31) 2771-1684,61,Minas Gerais,scorbunny
-Benevenuto,Viana,male,benevenuto.viana@example.com,(61) 8723-6274,28,Distrito Federal,cyndaquil
-Orandino,Pinto,male,orandino.pinto@example.com,(74) 7304-8987,65,Bahia,litten
-Adosindo,Ferreira,male,adosindo.ferreira@example.com,(89) 7599-5671,51,Piauí,fennekin
-Agapito,Nogueira,male,agapito.nogueira@example.com,(85) 4138-9418,61,Ceará,tepig
-Bassarme,da Mata,male,bassarme.damata@example.com,(73) 4826-1217,26,Bahia,fennekin
-Mel,Pires,male,mel.pires@example.com,(86) 0322-9867,77,Piauí,chimchar
-Adalsindo,da Cunha,male,adalsindo.dacunha@example.com,(66) 4354-8304,44,Mato Grosso,scorbunny
-Eugénio,da Paz,male,eugenio.dapaz@example.com,(49) 6700-4803,68,Santa Catarina,scorbunny
-Hélio,Gonçalves,male,helio.goncalves@example.com,(87) 2300-1969,53,Pernambuco,fennekin
-Delfino,Lopes,male,delfino.lopes@example.com,(99) 4313-9365,77,Maranhão,tepig
-Feliz,Barbosa,male,feliz.barbosa@example.com,(48) 5603-2595,63,Santa Catarina,charmander
-Anísio,Teixeira,male,anisio.teixeira@example.com,(54) 3678-4036,47,Rio Grande do Sul,charmander
-Mesaque,Lopes,male,mesaque.lopes@example.com,(15) 9712-0077,50,São Paulo,chimchar
-Garcia,Rocha,male,garcia.rocha@example.com,(81) 6830-1653,53,Pernambuco,torchic
-Jesus,Ferreira,male,jesus.ferreira@example.com,(65) 7753-6955,51,Mato Grosso,scorbunny
-Riu,Oliveira,male,riu.oliveira@example.com,(98) 8730-8866,66,Maranhão,cyndaquil
-Heriberto,da Conceição,male,heriberto.daconceicao@example.com,(21) 4021-7678,67,Rio de Janeiro,chimchar
-Amaro,Lopes,male,amaro.lopes@example.com,(14) 3750-4919,45,São Paulo,scorbunny
-Atanásio,Pereira,male,atanasio.pereira@example.com,(98) 1121-5600,50,Maranhão,scorbunny
-Oseias,Barros,male,oseias.barros@example.com,(66) 3929-0210,43,Mato Grosso,litten
-Duarte,Alves,male,duarte.alves@example.com,(81) 2317-9851,62,Pernambuco,torchic
-Baldomero,Fernandes,male,baldomero.fernandes@example.com,(44) 6825-4030,44,Paraná,torchic
-Xico,Oliveira,male,xico.oliveira@example.com,(31) 1228-4872,77,Minas Gerais,cyndaquil
-Ademar,Viana,male,ademar.viana@example.com,(93) 6599-1283,63,Pará,tepig
-Alivar,Moraes,male,alivar.moraes@example.com,(88) 9747-5856,53,Ceará,litten
-Ataíde,Barbosa,male,ataide.barbosa@example.com,(94) 0836-7500,50,Pará,charmander
-Nêuton,Costa,male,neuton.costa@example.com,(75) 6035-6867,34,Bahia,scorbunny
-Feliz,Nascimento,male,feliz.nascimento@example.com,(86) 1752-3867,41,Piauí,fennekin
-Laertes,Vieira,male,laertes.vieira@example.com,(86) 7284-6728,55,Piauí,chimchar
-Adolfo,da Rosa,male,adolfo.darosa@example.com,(16) 2923-2361,39,São Paulo,chimchar
-Aarão,Moura,male,aarao.moura@example.com,(65) 7434-3304,78,Mato Grosso,torchic
-Honório,Moreira,male,honorio.moreira@example.com,(62) 8563-2068,46,Goiás,scorbunny
-Israel,Gonçalves,male,israel.goncalves@example.com,(67) 6250-4578,35,Mato Grosso do Sul,scorbunny
-Messias,da Paz,male,messias.dapaz@example.com,(51) 1291-8329,72,Rio Grande do Sul,torchic
-Girão,Martins,male,girao.martins@example.com,(33) 5607-8490,33,Minas Gerais,scorbunny
-Heitor,Ramos,male,heitor.ramos@example.com,(32) 5633-7331,28,Minas Gerais,charmander
-Lupicino,Vieira,male,lupicino.vieira@example.com,(27) 2907-6348,29,Espírito Santo,chimchar
-Adério,da Luz,male,aderio.daluz@example.com,(28) 1517-9300,49,Espírito Santo,fennekin
-Adalsino,Oliveira,male,adalsino.oliveira@example.com,(88) 5402-9172,74,Ceará,litten
-Dioclécio,Jesus,male,dioclecio.jesus@example.com,(13) 5390-0543,57,São Paulo,chimchar
-Ladislau,Nunes,male,ladislau.nunes@example.com,(68) 3458-6848,72,Acre,fennekin
-Tude,Fogaça,male,tude.fogaca@example.com,(48) 7222-7986,25,Santa Catarina,torchic
-Jóni,Pinto,male,joni.pinto@example.com,(55) 1416-6506,60,Rio Grande do Sul,tepig
-Fred,Fogaça,male,fred.fogaca@example.com,(65) 0173-6072,48,Mato Grosso,litten
-Vitaliano,Martins,male,vitaliano.martins@example.com,(94) 6917-8472,56,Pará,charmander
-Benjamim,Rodrigues,male,benjamim.rodrigues@example.com,(48) 0031-9028,62,Santa Catarina,chimchar
+Hermes,da Cruz,male,hermes.dacruz@example.com,(18) 6176-8557,69,São Paulo,litten
+Vidaúl,Novaes,male,vidaul.novaes@example.com,(79) 1276-3031,57,Sergipe,charmander
+Joselindo,Rocha,male,joselindo.rocha@example.com,(37) 5886-2639,50,Minas Gerais,cyndaquil
+Axel,Mendes,male,axel.mendes@example.com,(86) 7794-2657,61,Piauí,torchic
+Elias,da Paz,male,elias.dapaz@example.com,(38) 1336-0333,26,Minas Gerais,fennekin
+Orlandino,Nascimento,male,orlandino.nascimento@example.com,(11) 6708-1285,37,São Paulo,fennekin
+Fausto,Duarte,male,fausto.duarte@example.com,(24) 0307-4679,33,Rio de Janeiro,charmander
+Nicodemos,Gomes,male,nicodemos.gomes@example.com,(49) 2734-2385,69,Santa Catarina,chimchar
+Franklino,Pinto,male,franklino.pinto@example.com,(88) 0977-9532,34,Ceará,scorbunny
+Gumesindo,da Rosa,male,gumesindo.darosa@example.com,(16) 8691-3434,53,São Paulo,charmander
+Alexandrino,Gomes,male,alexandrino.gomes@example.com,(91) 3476-1409,55,Pará,litten
+Filinto,Monteiro,male,filinto.monteiro@example.com,(22) 5560-3817,64,Rio de Janeiro,litten
+Charbel,Viana,male,charbel.viana@example.com,(13) 1653-9258,51,São Paulo,cyndaquil
+Franklim,da Cruz,male,franklim.dacruz@example.com,(44) 3677-8241,69,Paraná,litten
+Elgar,das Neves,male,elgar.dasneves@example.com,(33) 2260-4397,43,Minas Gerais,charmander
+Félix,Gomes,male,felix.gomes@example.com,(66) 7951-2886,71,Mato Grosso,cyndaquil
+Bernardo,Moura,male,bernardo.moura@example.com,(27) 9990-5839,56,Espírito Santo,cyndaquil
+Alvarino,de Souza,male,alvarino.desouza@example.com,(41) 7908-8969,30,Paraná,tepig
+Marto,Rodrigues,male,marto.rodrigues@example.com,(54) 0929-2650,44,Rio Grande do Sul,cyndaquil
+Jacinto,de Souza,male,jacinto.desouza@example.com,(18) 3541-0701,25,São Paulo,litten
+Gabino,Alves,male,gabino.alves@example.com,(16) 5304-4525,36,São Paulo,scorbunny
+Oseias,Peixoto,male,oseias.peixoto@example.com,(97) 3794-7768,67,Amazonas,scorbunny
+Jabes,Porto,male,jabes.porto@example.com,(95) 1671-1709,39,Roraima,cyndaquil
+Lael,Cavalcanti,male,lael.cavalcanti@example.com,(16) 4207-4777,67,São Paulo,chimchar
+Níger,Santos,male,niger.santos@example.com,(91) 1382-4401,66,Pará,scorbunny
+Anael,da Conceição,male,anael.daconceicao@example.com,(47) 4341-1111,54,Santa Catarina,tepig
+Evaristo,Santos,male,evaristo.santos@example.com,(33) 9214-5733,60,Minas Gerais,torchic
+Oliveiros,Monteiro,male,oliveiros.monteiro@example.com,(67) 1956-5154,42,Mato Grosso do Sul,litten
+Engrácio,Almeida,male,engracio.almeida@example.com,(88) 7482-1783,75,Ceará,torchic
+Virgílio,Silva,male,virgilio.silva@example.com,(55) 1859-8300,30,Rio Grande do Sul,litten
+Ricardo,Lopes,male,ricardo.lopes@example.com,(64) 5050-1426,74,Goiás,torchic
+Cildo,Rodrigues,male,cildo.rodrigues@example.com,(66) 5411-6791,55,Mato Grosso,chimchar
+Valdomiro,Ramos,male,valdomiro.ramos@example.com,(48) 6883-9796,54,Santa Catarina,tepig
+Eric,Monteiro,male,eric.monteiro@example.com,(89) 3066-0749,48,Piauí,scorbunny
+Hermes,da Luz,male,hermes.daluz@example.com,(43) 5616-5248,35,Paraná,scorbunny
+Adão,Silveira,male,adao.silveira@example.com,(69) 5672-1248,45,Rondônia,litten
+Amarílio,Ramos,male,amarilio.ramos@example.com,(67) 7906-6170,65,Mato Grosso do Sul,charmander
+Bartolomeu,Rocha,male,bartolomeu.rocha@example.com,(53) 6754-4235,65,Rio Grande do Sul,torchic
+Bartolomeu Perestrelo,Peixoto,male,bartolomeuperestrelo.peixoto@example.com,(49) 1510-2628,75,Santa Catarina,scorbunny
+Sindulfo,da Mata,male,sindulfo.damata@example.com,(91) 6614-6000,48,Pará,chimchar
+Duílio,Lopes,male,duilio.lopes@example.com,(48) 7325-5215,55,Santa Catarina,scorbunny
+Santelmo,Barbosa,male,santelmo.barbosa@example.com,(62) 1749-6534,76,Goiás,fennekin
+Celto,Pires,male,celto.pires@example.com,(68) 1776-9557,65,Acre,tepig
+Enio,Nogueira,male,enio.nogueira@example.com,(74) 3676-9551,52,Bahia,torchic
+Natalício,da Luz,male,natalicio.daluz@example.com,(66) 4165-3027,54,Mato Grosso,cyndaquil
+Ari,Oliveira,male,ari.oliveira@example.com,(71) 1657-0369,63,Bahia,tepig
+Maurício,Silva,male,mauricio.silva@example.com,(85) 6006-3040,68,Ceará,scorbunny
+Alito,Pires,male,alito.pires@example.com,(66) 6913-8644,32,Mato Grosso,fennekin
+Guimar,Carvalho,male,guimar.carvalho@example.com,(53) 6596-6553,31,Rio Grande do Sul,litten
+Olindo,da Cunha,male,olindo.dacunha@example.com,(49) 1053-9228,55,Santa Catarina,cyndaquil
+Tércio,Martins,male,tercio.martins@example.com,(97) 0750-4922,56,Amazonas,scorbunny
+Gonzaga,Vieira,male,gonzaga.vieira@example.com,(45) 6305-6613,54,Paraná,litten
+Óscar,Oliveira,male,oscar.oliveira@example.com,(19) 3137-7995,53,São Paulo,charmander
+Leonardo,Lopes,male,leonardo.lopes@example.com,(66) 3670-3088,55,Mato Grosso,tepig
+Nêuton,da Costa,male,neuton.dacosta@example.com,(41) 8514-9315,45,Paraná,tepig
+Olivier,Nunes,male,olivier.nunes@example.com,(74) 9307-7001,26,Bahia,litten
+Yuri,Aragão,male,yuri.aragao@example.com,(11) 4470-7935,43,São Paulo,tepig
+Sénio,Moreira,male,senio.moreira@example.com,(54) 1085-7301,62,Rio Grande do Sul,cyndaquil
+Vito,da Luz,male,vito.daluz@example.com,(27) 5603-8551,64,Espírito Santo,cyndaquil
+Jociano,Santos,male,jociano.santos@example.com,(33) 0757-7136,43,Minas Gerais,fennekin
+Alamiro,Campos,male,alamiro.campos@example.com,(34) 8420-7467,33,Minas Gerais,fennekin
+Evaldo,da Luz,male,evaldo.daluz@example.com,(61) 8854-3616,45,Distrito Federal,litten
+Martino,Moura,male,martino.moura@example.com,(66) 0965-5762,33,Mato Grosso,fennekin
+Ódin,Lima,male,odin.lima@example.com,(66) 0818-4399,31,Mato Grosso,fennekin
+Maurício,Mendes,male,mauricio.mendes@example.com,(15) 9442-4328,25,São Paulo,torchic
+Nicola,Nunes,male,nicola.nunes@example.com,(41) 8807-4883,55,Paraná,charmander
+Castelino,Teixeira,male,castelino.teixeira@example.com,(86) 8744-0008,69,Piauí,torchic
+Betino,Silveira,male,betino.silveira@example.com,(13) 3188-4907,55,São Paulo,tepig
+David,da Paz,male,david.dapaz@example.com,(74) 4910-7091,27,Bahia,cyndaquil
+Ernesto,Rodrigues,male,ernesto.rodrigues@example.com,(28) 1356-3702,39,Espírito Santo,cyndaquil
+Juventino,Ribeiro,male,juventino.ribeiro@example.com,(61) 4324-4051,39,Distrito Federal,cyndaquil
+Jacó,da Conceição,male,jaco.daconceicao@example.com,(95) 0871-3550,26,Roraima,fennekin
+Daniel,Silveira,male,daniel.silveira@example.com,(31) 3087-0425,76,Minas Gerais,fennekin
+Alito,Barbosa,male,alito.barbosa@example.com,(31) 8533-3337,71,Minas Gerais,charmander
+Madjer,Souza,male,madjer.souza@example.com,(69) 7491-7461,25,Rondônia,scorbunny
+Marcial,Freitas,male,marcial.freitas@example.com,(12) 8746-8359,71,São Paulo,chimchar
+Garibaldo,Rodrigues,male,garibaldo.rodrigues@example.com,(53) 8049-3877,72,Rio Grande do Sul,scorbunny
+Ataíde,Nogueira,male,ataide.nogueira@example.com,(89) 5852-9702,75,Piauí,litten
+Estevão,da Conceição,male,estevao.daconceicao@example.com,(53) 9374-0080,47,Rio Grande do Sul,fennekin
+Nero,Souza,male,nero.souza@example.com,(67) 1343-4730,49,Mato Grosso do Sul,torchic
+Jadir,Teixeira,male,jadir.teixeira@example.com,(64) 7375-3659,68,Goiás,litten
+Joselino,Cavalcanti,male,joselino.cavalcanti@example.com,(46) 6629-1690,67,Paraná,tepig
+Amâncio,Cardoso,male,amancio.cardoso@example.com,(38) 5503-3107,53,Minas Gerais,scorbunny
+Heitor,Moura,male,heitor.moura@example.com,(16) 0561-6574,75,São Paulo,litten
+Nataniel,da Luz,male,nataniel.daluz@example.com,(62) 0569-5569,73,Goiás,fennekin
+Enrique,Araújo,male,enrique.araujo@example.com,(61) 0614-7145,60,Distrito Federal,cyndaquil
+Salvador,Nascimento,male,salvador.nascimento@example.com,(14) 2651-8429,61,São Paulo,scorbunny
+Jacó,Melo,male,jaco.melo@example.com,(83) 2026-9989,70,Paraíba,scorbunny
+Almerindo,da Conceição,male,almerindo.daconceicao@example.com,(21) 5224-6746,58,Rio de Janeiro,fennekin
+Sandro,Lopes,male,sandro.lopes@example.com,(94) 0559-7362,66,Pará,fennekin
+Norival,Campos,male,norival.campos@example.com,(53) 8620-6046,38,Rio Grande do Sul,torchic
+Cláudio,da Cunha,male,claudio.dacunha@example.com,(95) 4806-0600,53,Roraima,litten
+Mendo,da Rosa,male,mendo.darosa@example.com,(31) 9642-2811,29,Minas Gerais,torchic
+Zerá,Campos,male,zera.campos@example.com,(27) 5758-2945,62,Espírito Santo,tepig
+Celto,Nunes,male,celto.nunes@example.com,(42) 7587-5070,52,Paraná,chimchar
+Nabor,Fernandes,male,nabor.fernandes@example.com,(67) 4455-9534,27,Mato Grosso do Sul,scorbunny
+Gerberto,Farias,male,gerberto.farias@example.com,(33) 8514-2553,64,Minas Gerais,torchic
+Anastácio,Costa,male,anastacio.costa@example.com,(49) 3452-0133,41,Santa Catarina,chimchar
+Axel,Barros,male,axel.barros@example.com,(33) 0546-6652,76,Minas Gerais,litten
+Vasco,Nogueira,male,vasco.nogueira@example.com,(81) 0120-7379,33,Pernambuco,litten
+Armindo,Farias,male,armindo.farias@example.com,(82) 3887-5785,46,Alagoas,torchic
+Amorim,Lopes,male,amorim.lopes@example.com,(24) 4844-2860,50,Rio de Janeiro,chimchar
